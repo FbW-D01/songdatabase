@@ -1,6 +1,8 @@
 import './App.css';
 import songs from './data/songs.json';
 
+const searchText = 'HAND';
+
 function App() {
 
 	const searchSongs = (searchText) => {
@@ -18,7 +20,9 @@ function App() {
 				{songs.map((song) => {
 					return (
 						<>
-							<li>{song.author} - {song.name}</li>
+							{ (song.author.toLowerCase().includes(searchText.toLowerCase())|| song.name.toLowerCase().includes(searchText.toLowerCase())) && (
+								<li>{song.author} - {song.name}</li>
+							)}
 						</>
 					)
 				})}
