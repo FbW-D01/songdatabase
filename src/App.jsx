@@ -13,8 +13,6 @@ function App() {
 
 	const toggleDescription = (index) => {
 		songs[index].showDescription = !songs[index].showDescription;
-		console.log(songs[index]);
-		console.log(`You clicked song with index ${index}`);
 		setSongs([...songs]);
 	}
 
@@ -24,7 +22,7 @@ function App() {
 			<div>
 				<input type="text" onChange={((e) => searchSongs(e.target.value))} />
 			</div>
-			<p>There are {songs.length} songs.</p>
+			<p>There are {songs.length} songs and {songs.filter((song) => song.showDescription).length} are showing.</p>
 			<ul>
 				{songs.map((song, index) => {
 					return (
