@@ -4,11 +4,15 @@ import songs from './data/songs.json';
 
 function App() {
 
- 	const [searchText, setSearchText] = useState('');
+	const [searchText, setSearchText] = useState('');
 
 	const searchSongs = (userSearchText) => {
 		setSearchText(userSearchText);
 	}
+
+	const toggleDescription = (song) => {
+		console.log(`You clicked ${song.name}`);
+	} 
 
 	return (
 		<div className="App">
@@ -21,8 +25,15 @@ function App() {
 				{songs.map((song) => {
 					return (
 						<>
-							{ (song.author.toLowerCase().includes(searchText.toLowerCase())|| song.name.toLowerCase().includes(searchText.toLowerCase())) && (
-								<li>{song.author} - {song.name}</li>
+							{(song.author.toLowerCase().includes(searchText.toLowerCase()) || song.name.toLowerCase().includes(searchText.toLowerCase())) && (
+								<li><span onClick={() => toggleDescription(song)}>{song.author} - {song.name}</span>
+
+									{song.showDescription && (
+										<ul>
+											<li>{song.description}</li>
+										</ul>
+									)}
+								</li>
 							)}
 						</>
 					)

@@ -2,16 +2,19 @@
 	{
 		"name": "Hey Jude",
 		"author": "Beatles",
-		"description": "A really good song for parties."
+		"description": "A really good song for parties.",
+		"showDescription": false
 	},
 	{
 		"name": "I want to hold your hand",
 		"author": "Beatles",
-		"description": "Was also sung in German."
+		"description": "Was also sung in German.",
+		"showDescription": false
 	},
 	{
 		"name": "Tommy",
 		"author": "The Who",
-		"description": "A cool Rock opera."
+		"description": "A cool Rock opera.",
+		"showDescription": false
 	}
 ]
