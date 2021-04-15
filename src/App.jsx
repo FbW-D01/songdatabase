@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import './App.css';
-import songs from './data/songs.json';
+import initialiSongs from './data/songs.json';
 
 function App() {
 
 	const [searchText, setSearchText] = useState('');
+	const [songs] = useState(initialiSongs); 
 
 	const searchSongs = (userSearchText) => {
 		setSearchText(userSearchText);
