@@ -5,15 +5,18 @@ import initialiSongs from './data/songs.json';
 function App() {
 
 	const [searchText, setSearchText] = useState('');
-	const [songs] = useState(initialiSongs); 
+	const [songs, setSongs] = useState(initialiSongs);
 
 	const searchSongs = (userSearchText) => {
 		setSearchText(userSearchText);
 	}
 
-	const toggleDescription = (song) => {
-		console.log(`You clicked ${song.name}`);
-	} 
+	const toggleDescription = (index) => {
+		songs[index].showDescription = !songs[index].showDescription;
+		console.log(songs[index]);
+		console.log(`You clicked song with index ${index}`);
+		setSongs([...songs]);
+	}
 
 	return (
 		<div className="App">
@@ -23,11 +26,11 @@ function App() {
 			</div>
 			<p>There are {songs.length} songs.</p>
 			<ul>
-				{songs.map((song) => {
+				{songs.map((song, index) => {
 					return (
 						<>
 							{(song.author.toLowerCase().includes(searchText.toLowerCase()) || song.name.toLowerCase().includes(searchText.toLowerCase())) && (
-								<li><span onClick={() => toggleDescription(song)}>{song.author} - {song.name}</span>
+								<li>{index}. <span onClick={() => toggleDescription(index)}>{song.author} - {song.name} - {song.showDescription ? 'true' : 'false'}</span>
 
 									{song.showDescription && (
 										<ul>
