@@ -16,5 +16,11 @@
 		"author": "The Who",
 		"description": "A cool Rock opera.",
 		"showDescription": false
+	},	
+	{
+		"name": "Señor Coconut",
+		"author": " El Baile Aleman (A Latin Tribute to Kraftwerk)",
+		"description": "Car Driver Music",
+		"showDescription": false
 	}
 ]
