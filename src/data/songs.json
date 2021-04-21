@@ -1,25 +1,34 @@
 [
 	{
 		"name": "Hey Jude",
-		"author": "Beatles",
+		"author": [
+			"Paul McCartney",
+			"John Lennon"
+		],
 		"description": "A really good song for parties.",
 		"showDescription": false
 	},
 	{
 		"name": "I want to hold your hand",
-		"author": "Beatles",
+		"author": [
+			"Beatles"
+		],
 		"description": "Was also sung in German.",
 		"showDescription": false
 	},
 	{
 		"name": "Tommy",
-		"author": "The Who",
+		"author": [
+			"The Who"
+		],
 		"description": "A cool Rock opera.",
 		"showDescription": false
-	},	
+	},
 	{
 		"name": "Señor Coconut",
-		"author": " El Baile Aleman (A Latin Tribute to Kraftwerk)",
+		"author": [
+			"El Baile Aleman (A Latin Tribute to Kraftwerk)"
+		],
 		"description": "Car Driver Music",
 		"showDescription": false
 	}

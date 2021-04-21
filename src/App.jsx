@@ -18,6 +18,16 @@ function App() {
 		setSongs([...songs]);
 	}
 
+	const authorsContainsSearchText = (song) => {
+		let foundSearchText = false;
+		song.author.forEach((auth) => {
+			if (auth.toLowerCase().includes(searchText.toLowerCase())) {
+				foundSearchText = true;
+			};
+		});
+		return foundSearchText;
+	}
+
 	return (
 		<div className="App">
 			<nav>
@@ -44,8 +54,8 @@ function App() {
 						{songs.map((song, index) => {
 							return (
 								<>
-									{(song.author.toLowerCase().includes(searchText.toLowerCase()) || song.name.toLowerCase().includes(searchText.toLowerCase())) && (
-										<li>{index}. <span onClick={() => toggleDescription(index)}>{song.author} - {song.name} - {song.showDescription ? 'true' : 'false'}</span>
+									{(authorsContainsSearchText(song) || song.name.toLowerCase().includes(searchText.toLowerCase())) && (
+										<li>{index}. <span onClick={() => toggleDescription(index)}>{song.author.join(', ')} - {song.name} - {song.showDescription ? 'true' : 'false'}</span>
 
 											{song.showDescription && (
 												<ul>
