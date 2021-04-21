@@ -32,10 +32,10 @@ function App() {
 			</nav>
 			<Switch>
 				<Route path="/about">
-					<About/>
+					<About />
 				</Route>
 				<Route path="/">
-			<h1>Song Database, ver 2.0</h1>
+					<h1>Song Database, ver 3.0</h1>
 					<div>
 						<input type="text" onChange={((e) => searchSongs(e.target.value))} />
 					</div>
