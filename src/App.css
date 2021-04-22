@@ -64,7 +64,28 @@ ul.list li {
 	.wrapper {
 		display: flex;
 	}
+	.iconRecord:hover {
+		animation: record-spin infinite 1s linear;
+		color: yellow;
+	}
+	.iconRecord svg {
+		width: 20px;
+		height: 20px;
+	}
 	.iconRecord {
-		margin: 2px 5px 0 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 2px 5px 5px 0;
+		animation: record-spin infinite 10s linear;
+		color: #888;
+	}
+	@keyframes record-spin {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
 	}
 }

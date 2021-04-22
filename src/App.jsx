@@ -59,7 +59,7 @@ function App() {
 									{(authorsContainsSearchText(song) || song.name.toLowerCase().includes(searchText.toLowerCase())) && (
 										<div className="wrapper">
 											<div className="iconRecord"><SiDiscogs /></div>
-											<div onClick={() => toggleDescription(index)}>{song.author.join(', ')} - {song.name}
+											<div className="textRecord" onClick={() => toggleDescription(index)}>{song.author.join(', ')} - {song.name}
 												{song.showDescription && (
 													<div>{song.description}</div>
 												)}
