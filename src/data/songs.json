@@ -6,7 +6,8 @@
 			"John Lennon"
 		],
 		"description": "A really good song for parties.",
-		"showDescription": false
+		"showDescription": false,
+		"url": "https://www.discogs.com/de/The-Beatles-Hey-Jude/release/478872"
 	},
 	{
 		"name": "I want to hold your hand",

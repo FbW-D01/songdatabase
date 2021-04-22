@@ -4,6 +4,7 @@ import initialSongs from './data/songs.json';
 import { Switch, Route, Link } from "react-router-dom";
 import About from './components/About';
 import { BsMusicNoteBeamed } from 'react-icons/bs';
+import { SiDiscogs } from 'react-icons/si';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
 
 	return (
 		<div className="App">
+			<SiDiscogs/>
 			<nav>
 				<ul>
 					<li>
@@ -46,9 +48,9 @@ function App() {
 					<About />
 				</Route>
 				<Route path="/">
-					<h1><BsMusicNoteBeamed className="iconMusic" /> Song Database, ver 3.0</h1>
+					<h1 className="title"><BsMusicNoteBeamed className="iconMusic" /> Song Database, ver 3.0</h1>
 					<div>
-						<input type="text" onChange={((e) => searchSongs(e.target.value))} />
+						<input type="text" className="inputBox" onChange={((e) => searchSongs(e.target.value))} />
 					</div>
 					<p>There are {songs.length} songs and {songs.filter((song) => song.showDescription).length} are showing.</p>
 					<ul className="list">
@@ -56,7 +58,7 @@ function App() {
 							return (
 								<>
 									{(authorsContainsSearchText(song) || song.name.toLowerCase().includes(searchText.toLowerCase())) && (
-										<li><span onClick={() => toggleDescription(index)}>{song.author.join(', ')} - {song.name} - {song.showDescription ? 'true' : 'false'}</span>
+										<li><span onClick={() => toggleDescription(index)}>{song.author.join(', ')} - {song.name}</span>
 
 											{song.showDescription && (
 												<ul>

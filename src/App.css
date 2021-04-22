@@ -3,10 +3,12 @@ body {
 	background-color: #333;
 	color: ivory;
 }
+
 nav {
 	margin: 0;
 	padding: 0;
 }
+
 nav ul {
 	display: flex;
 	margin: 0;
@@ -42,4 +44,21 @@ ul.list li {
 	height: 50px; */
 	stroke: blue;
 	filter: drop-shadow(5px 5px 10px yellow);
+}
+
+/* smartphone view */
+
+@media (max-width: 577px) {
+	h1.title {
+		font-size: 1.6rem;
+	}
+	input.inputBox {
+		width: 100%;
+		font-size: 1.5em;
+	}
+}
+
+/* computer/table view */
+
+@media (min-width: 578px) {
 }
