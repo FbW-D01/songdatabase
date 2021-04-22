@@ -32,7 +32,6 @@ function App() {
 
 	return (
 		<div className="App">
-			<SiDiscogs/>
 			<nav>
 				<ul>
 					<li>
@@ -53,24 +52,24 @@ function App() {
 						<input type="text" className="inputBox" onChange={((e) => searchSongs(e.target.value))} />
 					</div>
 					<p>There are {songs.length} songs and {songs.filter((song) => song.showDescription).length} are showing.</p>
-					<ul className="list">
+					<div className="list">
 						{songs.map((song, index) => {
 							return (
 								<>
 									{(authorsContainsSearchText(song) || song.name.toLowerCase().includes(searchText.toLowerCase())) && (
-										<li><span onClick={() => toggleDescription(index)}>{song.author.join(', ')} - {song.name}</span>
-
-											{song.showDescription && (
-												<ul>
-													<li>{song.description}</li>
-												</ul>
-											)}
-										</li>
+										<div className="wrapper">
+											<div className="iconRecord"><SiDiscogs /></div>
+											<div onClick={() => toggleDescription(index)}>{song.author.join(', ')} - {song.name}
+												{song.showDescription && (
+													<div>{song.description}</div>
+												)}
+											</div>
+										</div>
 									)}
 								</>
 							)
 						})}
-					</ul>
+					</div>
 
 				</Route>
 			</Switch>
