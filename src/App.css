@@ -3,13 +3,24 @@ body {
 	background-color: #333;
 	color: ivory;
 }
-
+nav {
+	margin: 0;
+	padding: 0;
+}
 nav ul {
 	display: flex;
+	margin: 0;
+	padding: 0;
 }
 
 nav ul li a {
 	text-decoration: none;
+	color: yellow;
+}
+
+nav ul li:nth-of-type(1):after {
+	content: " |";
+	opacity: .3;
 }
 
 nav ul li {
@@ -24,6 +35,7 @@ ul.list li {
 .iconMusic:hover {
 	color: blue;
 }
+
 .iconMusic {
 	color: red;
 	/* width: 50px;
