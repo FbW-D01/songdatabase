@@ -7,6 +7,7 @@ body {
 nav {
 	margin: 0;
 	padding: 0;
+	display: flex;
 }
 
 nav ul {
@@ -17,12 +18,12 @@ nav ul {
 
 nav ul li a {
 	text-decoration: none;
-	color: yellow;
+	color: rgb(19, 19, 18);
 }
 
 nav ul li:nth-of-type(1):after {
 	content: " |";
-	opacity: .3;
+	opacity: 0.3;
 }
 
 nav ul li {
@@ -36,6 +37,7 @@ ul.list li {
 
 .iconMusic:hover {
 	color: blue;
+
 }
 
 .iconMusic {
@@ -46,11 +48,93 @@ ul.list li {
 	filter: drop-shadow(5px 5px 10px yellow);
 }
 
+/* New Style von Gamze */
+.main {
+	font-family: "Poppins", sans-serif;
+	min-height: 100vh;
+	background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.glass {
+	background: white;
+	min-height: 80vh;
+	width: 60%;
+	background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+	border-radius: 2rem;
+	z-index: 2;
+	backdrop-filter: blur(2rem);
+	display: flex;
+}
+.circle1,
+.circle2 {
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.3)
+  );
+  height: 20rem;
+  width: 20rem;
+  position: absolute;
+  border-radius: 50%;
+}
+.circle1 {
+	top: 5%;
+	right: 15%;
+}
+.circle2 {
+	bottom: 5%;
+	left: 10%;
+}
+.inputBox{
+	background: linear-gradient(
+		to right bottom,
+		rgba(255, 255, 255, 0.7),
+		rgba(255, 255, 255, 0.3)
+	  );
+	  border: none;
+	  width: 50%;
+	  padding: 0.5rem;
+	  border-radius: 2rem;
+}
+p{
+	color: #426696;
+}
+.list{
+	color: #426696;
+}
+.title{
+	color: #426696;
+ }
+ .dashboard {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	text-align: center;
+	background: linear-gradient(
+	  to right bottom,
+	  rgba(255, 255, 255, 0.7),
+	  rgba(255, 255, 255, 0.3)
+	);
+	border-radius: 2rem;
+  }
+  .links{
+	margin: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 /* smartphone view */
 
 @media (max-width: 577px) {
 	h1.title {
 		font-size: 1.6rem;
+		color: #426696;
 	}
 	input.inputBox {
 		width: 100%;
@@ -64,7 +148,7 @@ ul.list li {
 		border: 2px solid #666;
 		margin: 0 0 8px 0;
 		background-color: #555;
-		box-shadow: 1px 1px 2px #777; 
+		box-shadow: 1px 1px 2px #777;
 	}
 	div.wrapper:nth-child(odd) {
 		background-color: #444;
